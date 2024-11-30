@@ -4,7 +4,7 @@ const ProtectedRouteGlobal = ({ element }) => {
     const token = JSON.parse(localStorage.getItem("usererp"));
 
     if (!token) {
-        return <Navigate to="/login" replace />;
+        return <Navigate to="login" replace />;
     }
 
     return element;

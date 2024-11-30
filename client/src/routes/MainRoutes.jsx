@@ -65,7 +65,7 @@ const MainRoutes = {
       )
     },
     {
-      path: '/detail-list-leader/:id',
+      path: 'detail-list-leader/:id',
       element: (
         <ProtectedRoute allowedRoles={['admin', 'leader']} element={<DetailList />} />
       )
@@ -89,7 +89,7 @@ const MainRoutes = {
       )
     },
     {
-      path: '/detail-list-liberty/:id',
+      path: 'detail-list-liberty/:id',
       element: (
         <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<DetailListLiberty />} />
       )
@@ -113,7 +113,7 @@ const MainRoutes = {
       )
     },
     {
-      path: '/detail-list-monaco/:id',
+      path: 'detail-list-monaco/:id',
       element: (
         <ProtectedRoute allowedRoles={['admin', 'monaco']} element={<DetailListMonaco />} />
       )
@@ -137,7 +137,7 @@ const MainRoutes = {
       )
     },
     {
-      path: '/detail-list-turan/:id',
+      path: 'detail-list-turan/:id',
       element: (
         <ProtectedRoute allowedRoles={['admin', 'turan']} element={<DetailListTuran />} />
       )

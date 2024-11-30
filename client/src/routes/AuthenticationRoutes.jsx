@@ -7,11 +7,11 @@ const AuthenticationRoutes = {
   element: <MinimalLayout />,
   children: [
     {
-      path: '/login',
+      path: 'login',
       element: <LoginForm />
     },
     {
-      path: '/403',
+      path: '403',
       element: <AccessDenied />
     }
   ]
