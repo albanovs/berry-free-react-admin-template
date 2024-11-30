@@ -12,7 +12,7 @@ import RaitingAdmin from "../components/admins/admins";
 import RaitingLogist from "../components/admins/logist";
 import { NavLink } from "react-router-dom";
 
-const Otdel1 = ({ isLoading }) => {
+const MonacoPage = ({ isLoading }) => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
@@ -20,12 +20,12 @@ const Otdel1 = ({ isLoading }) => {
                     <Grid item lg={4} md={12} sm={12} xs={12}>
                         <Grid container spacing={2}>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <NavLink to='/leader-add-otchet'>
+                                <NavLink to='/monaco-add-otchet'>
                                     <TotalIncomeDarkCard title={'Создать отчет'} isLoading={isLoading} />
                                 </NavLink>
                             </Grid>
                             <Grid item sm={6} xs={12} md={6} lg={12}>
-                                <NavLink to='/leader-view-otchet'>
+                                <NavLink to='/monaco-view-otchet'>
                                     <TotalIncomeDarkCard title={'Ежедневные отчеты'} isLoading={isLoading} />
                                 </NavLink>
                             </Grid>
@@ -78,4 +78,4 @@ const Otdel1 = ({ isLoading }) => {
     );
 };
 
-export default Otdel1;
+export default MonacoPage;

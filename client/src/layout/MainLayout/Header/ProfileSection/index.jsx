@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useTheme } from '@mui/material/styles';
@@ -17,7 +16,6 @@ import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
 import { IconLogout, IconSettings } from '@tabler/icons-react';
 
-
 const ProfileSection = () => {
   const theme = useTheme();
   const customization = useSelector((state) => state.customization);
@@ -26,8 +24,10 @@ const ProfileSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
-  const handleLogout = async () => {
-    console.log('Logout');
+
+  const handleLogout = () => {
+    localStorage.removeItem('usererp');
+    navigate('/login');
   };
 
   const handleClose = (event) => {
@@ -45,6 +45,7 @@ const ProfileSection = () => {
       navigate(route);
     }
   };
+
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -132,8 +133,7 @@ const ProfileSection = () => {
                         sx={{ borderRadius: `${customization.borderRadius}px` }}
                         selected={selectedIndex === 1}
                         onClick={(event) => handleListItemClick(event, 1, '#')}
-                      >
-                      </ListItemButton>
+                      />
                       <ListItemButton
                         sx={{ borderRadius: `${customization.borderRadius}px` }}
                         selected={selectedIndex === 4}

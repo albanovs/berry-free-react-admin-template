@@ -1,20 +1,19 @@
-import { lazy } from 'react';
-import Loadable from 'ui-component/Loadable';
 import MinimalLayout from 'layout/MinimalLayout';
-const AuthLogin3 = Loadable(lazy(() => import('views/pages/authentication3/Login3')));
-const AuthRegister3 = Loadable(lazy(() => import('views/pages/authentication3/Register3')));
+import RegisterForm from 'views/pages/auth/Register';
+import AccessDenied from 'views/403';
+import LoginForm from 'views/pages/auth/Login';
 
 const AuthenticationRoutes = {
   path: '/',
   element: <MinimalLayout />,
   children: [
     {
-      path: '/pages/login/login3',
-      element: <AuthLogin3 />
+      path: '/login',
+      element: <LoginForm />
     },
     {
-      path: '/pages/register/register3',
-      element: <AuthRegister3 />
+      path: '/403',
+      element: <AccessDenied />
     }
   ]
 };
