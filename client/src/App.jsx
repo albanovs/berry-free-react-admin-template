@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import { RouterProvider, Navigate } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
 import router from 'routes';
 import themes from 'themes';
-import NavigationScroll from 'layout/NavigationScroll';
+// import NavigationScroll from 'layout/NavigationScroll';
 
 const App = () => {
   const customization = useSelector((state) => state.customization);
@@ -13,9 +13,9 @@ const App = () => {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={themes(customization)}>
         <CssBaseline />
-        <NavigationScroll>
+        {/* <NavigationScroll> */}
           <RouterProvider router={router} />
-        </NavigationScroll>
+        {/* </NavigationScroll> */}
       </ThemeProvider>
     </StyledEngineProvider>
   );
