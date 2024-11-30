@@ -6,7 +6,7 @@ const LoginForm = () => {
     const [formData, setFormData] = useState({ username: "", password: "" });
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate(); // Хук для навигации
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;

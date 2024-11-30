@@ -6,7 +6,7 @@ import jsconfigPaths from 'vite-jsconfig-paths';
 
 export default defineConfig({
   plugins: [react(), jsconfigPaths()],
-  base: '/',
+  base: '/erp',
   define: {
     global: 'window'
   },
