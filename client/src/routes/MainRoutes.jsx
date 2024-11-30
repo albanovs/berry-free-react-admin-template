@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 import ProtectedRoute from './ProtectedRoute';
+import ProtectedRouteGlobal from './globalProtected';
 
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 const Otdels = Loadable(lazy(() => import('views/pages/otdely')));
@@ -32,20 +33,20 @@ const MainRoutes = {
   children: [
     {
       path: '/',
-      element: <DashboardDefault />
+      element: <ProtectedRouteGlobal element={<DashboardDefault />} />
     },
     {
       path: 'dashboard',
       children: [
         {
           path: 'default',
-          element: <DashboardDefault />
+          element: <ProtectedRouteGlobal element={<DashboardDefault />} />
         }
       ]
     },
     {
       path: 'otdely',
-      element: <Otdels />
+      element: <ProtectedRouteGlobal element={<Otdels />} />
     },
     {
       path: 'leader',
@@ -155,11 +156,11 @@ const MainRoutes = {
     },
     {
       path: 'instagramslot',
-      element: <InstagraSlot />
+      element: <ProtectedRouteGlobal element={<InstagraSlot />} />
     },
     {
       path: 'telegramslot',
-      element: <TelegramSlot />
+      element: <ProtectedRouteGlobal element={<TelegramSlot />} />
     }
   ],
 };

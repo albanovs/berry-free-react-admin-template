@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import LoadingAnimate from 'ui-component/LoadingAnimate';
+import api from 'api/api';
 
 export default function InstagraSlot() {
     const [loading, setLoading] = useState(false);
     const [responseData, setResponseData] = useState([]);
-    const url = 'https://fashion-backend-r8hh.onrender.com';
-
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(url + '/test/mymodels');
+                const response = await api.get(url + '/instagam-slot');
                 setResponseData(response.data);
                 setLoading(true);
             } catch (error) {
