@@ -25,7 +25,7 @@ const Otdels = () => {
                 <EarningCard url={'/monaco'} title={'Монако'} isLoading={isLoading} />
             </Grid>
             <Grid item lg={4} md={6} sm={6} xs={12}>
-                <EarningCard url={'/otdel5'} title={'Отдел 5'} isLoading={isLoading} />
+                <EarningCard url={'/ilyas'} title={'Ильяс'} isLoading={isLoading} />
             </Grid>
             <Grid item lg={4} md={6} sm={6} xs={12}>
                 <EarningCard url={'/itotdel'} title={'IT отдел'} isLoading={isLoading} />

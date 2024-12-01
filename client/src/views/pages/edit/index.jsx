@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import TotalIncomeLightCard from 'views/dashboard/TotalIncomeLightCard';
 import SimCardIcon from '@mui/icons-material/SimCard';
+import { NavLink } from 'react-router-dom';
 
 export default function Edits() {
 
@@ -53,25 +54,31 @@ export default function Edits() {
                 gap={2}
             >
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Лидер"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='leader-simcard'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Лидер"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Liberty"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='liberty-simcard'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Либерти"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Монако"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='monaco-simcard'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Монако"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
             </Box>
             <Box
@@ -82,25 +89,31 @@ export default function Edits() {
                 marginTop='10px'
             >
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Туран"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='turan-simcard'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Туран"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Ильяс"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='ilyas-simcard'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Ильяс"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Старшие менеджеры"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='sm-simcard'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Старшие менеджеры"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
             </Box>
             <h1 className='mb-5 mt-5 font-semibold'>SIM карты старших админов, помощники админов, админы, логисты</h1>
@@ -111,25 +124,31 @@ export default function Edits() {
                 gap={2}
             >
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Лидер"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='leader-simcard-admin'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Лидер"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Liberty"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='liberty-simcard-admin'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Либерти"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Монако"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='monaco-simcard-admin'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Монако"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
             </Box>
             <Box
@@ -140,25 +159,31 @@ export default function Edits() {
                 marginTop='10px'
             >
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Туран"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='turan-simcard-admin'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Туран"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Ильяс"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='ilyas-simcard-admin'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Ильяс"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Админы логисты"}
-                        icon={<SimCardIcon fontSize="inherit" />}
-                    />
+                    <NavLink to='admin-logist'>
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Админы логисты"}
+                            icon={<SimCardIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
             </Box>
         </Grid>

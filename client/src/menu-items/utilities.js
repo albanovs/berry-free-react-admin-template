@@ -32,6 +32,7 @@ const utilities = {
       type: 'item',
       url: '/edit',
       icon: icons.IconShadow,
+      breadcrumbs: false
     }
   ]
 };

@@ -3,6 +3,21 @@ import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 import ProtectedRoute from './ProtectedRoute';
 import ProtectedRouteGlobal from './globalProtected';
+import SimCardLeader from 'views/pages/edit/manager_sim/leader';
+import SimCardMonaco from 'views/pages/edit/manager_sim/monaco';
+import SimCardIlyas from 'views/pages/edit/manager_sim/ilyas';
+import SimCardLiberty from 'views/pages/edit/manager_sim/liberty';
+import SimCardTuran from 'views/pages/edit/manager_sim/turan';
+import SimCardLeaderAdmin from 'views/pages/edit/admin_sim/leader';
+import SimCardMonacoAdmin from 'views/pages/edit/admin_sim/monaco';
+import SimCardIlyasAdmin from 'views/pages/edit/admin_sim/ilyas';
+import SimCardLibertyAdmin from 'views/pages/edit/admin_sim/liberty';
+import SimCardTuranAdmin from 'views/pages/edit/admin_sim/turan';
+import SimcardLogistAndAdmin from 'views/pages/edit/adminlogist_sim/adminlogist';
+import IlyasPage from 'views/pages/otdely/ilyas';
+import AddIlyasOtchet from 'views/pages/otdely/ilyas/createOtchet';
+import ViewOtchetIlyas from 'views/pages/otdely/ilyas/viewOtchet';
+import DetailListIlyas from 'views/pages/otdely/ilyas/detailviewOtchet';
 
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 const Otdels = Loadable(lazy(() => import('views/pages/otdely')));
@@ -119,33 +134,37 @@ const MainRoutes = {
       )
     },
     {
-      path: 'turan',
+      path: 'ilyas',
       element: (
-        <ProtectedRoute allowedRoles={['admin', 'turan']} element={<TuranPage />} />
+        <ProtectedRoute allowedRoles={['admin', 'ilyas']} element={<IlyasPage />} />
       )
     },
     {
-      path: 'turan-add-otchet',
+      path: 'ilyas-add-otchet',
       element: (
-        <ProtectedRoute allowedRoles={['admin', 'turan']} element={<AddTuranOtchet />} />
+        <ProtectedRoute allowedRoles={['admin', 'ilyas']} element={<AddIlyasOtchet />} />
       )
     },
     {
-      path: 'turan-view-otchet',
+      path: 'ilyas-view-otchet',
       element: (
-        <ProtectedRoute allowedRoles={['admin', 'turan']} element={<ViewOtchetTuran />} />
+        <ProtectedRoute allowedRoles={['admin', 'ilyas']} element={<ViewOtchetIlyas />} />
       )
     },
     {
-      path: 'detail-list-turan/:id',
+      path: 'detail-list-ilyas/:id',
       element: (
-        <ProtectedRoute allowedRoles={['admin', 'turan']} element={<DetailListTuran />} />
+        <ProtectedRoute allowedRoles={['admin', 'ilyas']} element={<DetailListIlyas />} />
       )
+    },
+    {
+      path: 'edit/admin-logist',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimcardLogistAndAdmin />} />
     },
     {
       path: 'edit',
       element: (
-        <ProtectedRoute allowedRoles={['admin']} element={<Edits />} />
+        <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<Edits />} />
       )
     },
     {
@@ -161,7 +180,53 @@ const MainRoutes = {
     {
       path: 'telegramslot',
       element: <ProtectedRouteGlobal element={<TelegramSlot />} />
-    }
+    },
+    {
+      path: 'edit/leader-simcard',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardLeader />} />
+    },
+    {
+      path: 'edit/monaco-simcard',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardMonaco />} />
+    },
+    {
+      path: 'edit/ilyas-simcard',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardIlyas />} />
+    },
+    {
+      path: 'edit/liberty-simcard',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardLiberty />} />
+    },
+    {
+      path: 'edit/turan-simcard',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardTuran />} />
+    },
+
+
+    {
+      path: 'edit/leader-simcard-admin',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardLeaderAdmin />} />
+    },
+    {
+      path: 'edit/monaco-simcard-admin',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardMonacoAdmin />} />
+    },
+    {
+      path: 'edit/ilyas-simcard-admin',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardIlyasAdmin />} />
+    },
+    {
+      path: 'edit/liberty-simcard-admin',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardLibertyAdmin />} />
+    },
+    {
+      path: 'edit/turan-simcard-admin',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimCardTuranAdmin />} />
+    },
+    {
+      path: 'edit/admin-logist',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimcardLogistAndAdmin />} />
+    },
   ],
 };
 

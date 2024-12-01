@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), jsconfigPaths()],
   base: '/',
   define: {
-    global: 'window'
+    global: 'window',
   },
   resolve: {
     // alias: [
