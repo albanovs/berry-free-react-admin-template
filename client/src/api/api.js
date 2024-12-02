@@ -4,8 +4,12 @@ import axios from "axios";
 //     baseURL: "http://localhost:4000",
 // });
 
+// const api = axios.create({
+//     baseURL: "https://erp-services-8an7.onrender.com",
+// });
+
 const api = axios.create({
-    baseURL: "https://erp-services-8an7.onrender.com",
+    baseURL: "https://erp-backend-7m8x.onrender.com",
 });
 
 export default api;
