@@ -110,6 +110,30 @@ const MainRoutes = {
       )
     },
     {
+      path: 'turan',
+      element: (
+        <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<TuranPage />} />
+      )
+    },
+    {
+      path: 'turan-add-otchet',
+      element: (
+        <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<AddTuranOtchet />} />
+      )
+    },
+    {
+      path: 'turan-view-otchet',
+      element: (
+        <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<ViewOtchetTuran />} />
+      )
+    },
+    {
+      path: 'detail-list-turan/:id',
+      element: (
+        <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<DetailListTuran />} />
+      )
+    },
+    {
       path: 'monaco',
       element: (
         <ProtectedRoute allowedRoles={['admin', 'monaco']} element={<MonacoPage />} />
