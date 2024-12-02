@@ -18,6 +18,10 @@ import IlyasPage from 'views/pages/otdely/ilyas';
 import AddIlyasOtchet from 'views/pages/otdely/ilyas/createOtchet';
 import ViewOtchetIlyas from 'views/pages/otdely/ilyas/viewOtchet';
 import DetailListIlyas from 'views/pages/otdely/ilyas/detailviewOtchet';
+import Fullfilment1 from 'views/pages/fulfilments/pages/fullfilments-1';
+import Fullfilment1List from 'views/pages/fulfilments/pages/fullfilments-1-list';
+import DetailsPage from 'views/pages/fulfilments/components/detail-page';
+import Otchets from 'views/pages/fulfilments/components/add-otchet';
 
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard')));
 const Otdels = Loadable(lazy(() => import('views/pages/otdely')));
@@ -192,12 +196,6 @@ const MainRoutes = {
       )
     },
     {
-      path: 'fullfilment',
-      element: (
-        <ProtectedRoute allowedRoles={['admin', 'manager']} element={<Fulfilments />} />
-      )
-    },
-    {
       path: 'instagramslot',
       element: <ProtectedRouteGlobal element={<InstagraSlot />} />
     },
@@ -250,6 +248,28 @@ const MainRoutes = {
     {
       path: 'edit/admin-logist',
       element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<SimcardLogistAndAdmin />} />
+    },
+    {
+      path: 'fullfilment',
+      element: (
+        <ProtectedRoute allowedRoles={['admin', 'manager']} element={<Fulfilments />} />
+      )
+    },
+    {
+      path: 'fullfilment-page-1',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<Fullfilment1 />} />
+    },
+    {
+      path: 'fulfilments/view',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<Fullfilment1List />} />
+    },
+    {
+      path: 'detail-fulfilment-otchet-1/:id',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={< DetailsPage link={'1'} />} />
+    },
+    {
+      path: 'fullfilment/add-otchet-full1',
+      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={< Otchets />} />
     },
   ],
 };

@@ -3,6 +3,7 @@ import { Box } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import TotalIncomeLightCard from 'views/dashboard/TotalIncomeLightCard'
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import { NavLink } from 'react-router-dom';
 
 export default function Fulfilments() {
 
@@ -21,18 +22,22 @@ export default function Fulfilments() {
                 gap={2}
             >
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Создать"}
-                        icon={<AssignmentIcon fontSize="inherit" />}
-                    />
+                    <NavLink to="add-otchet-full1">
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Создать"}
+                            icon={<AssignmentIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
                 <Box flex={1} width={{ xs: "100%", lg: "auto" }}>
-                    <TotalIncomeLightCard
-                        isLoading={isLoading}
-                        total={"Отчеты"}
-                        icon={<AssignmentIcon fontSize="inherit" />}
-                    />
+                    <NavLink to="/fulfilments/view">
+                        <TotalIncomeLightCard
+                            isLoading={isLoading}
+                            total={"Отчеты"}
+                            icon={<AssignmentIcon fontSize="inherit" />}
+                        />
+                    </NavLink>
                 </Box>
             </Box>
         </Grid>
