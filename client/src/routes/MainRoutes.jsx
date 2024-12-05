@@ -252,24 +252,24 @@ const MainRoutes = {
     {
       path: 'fullfilment',
       element: (
-        <ProtectedRoute allowedRoles={['admin', 'manager']} element={<Fulfilments />} />
+        <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<Fulfilments />} />
       )
     },
     {
       path: 'fullfilment-page-1',
-      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<Fullfilment1 />} />
+      element: <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<Fullfilment1 />} />
     },
     {
       path: 'fulfilments/view',
-      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={<Fullfilment1List />} />
+      element: <ProtectedRoute allowedRoles={['admin', 'liberty']} element={<Fullfilment1List />} />
     },
     {
       path: 'detail-fulfilment-otchet-1/:id',
-      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={< DetailsPage link={'1'} />} />
+      element: <ProtectedRoute allowedRoles={['admin', 'liberty']} element={< DetailsPage link={'1'} />} />
     },
     {
       path: 'fullfilment/add-otchet-full1',
-      element: <ProtectedRoute allowedRoles={['admin', 'admin.sim']} element={< Otchets />} />
+      element: <ProtectedRoute allowedRoles={['admin', 'liberty']} element={< Otchets />} />
     },
   ],
 };
